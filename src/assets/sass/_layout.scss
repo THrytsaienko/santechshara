@@ -1,0 +1,115 @@
+.wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 144rem;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .numbers-slick {
+        align-self: flex-end;
+    }
+}
+
+.catalog,
+.hot-deals,
+.about,
+.suppliers,
+.contacts,
+.footer,
+.shopping-info {
+    display: flex;
+}
+
+.about,
+.suppliers,
+.catalog,
+.contacts {
+    @include respond(phone) {
+        flex-direction: column; //650
+    }
+    @include respond(small-phone) {
+        flex-direction: column; //400
+    }
+    @include respond(super-small-phone) {
+        flex-direction: column; //400
+    }
+}
+
+.footer {
+    justify-content: space-between;
+}
+
+.col-2,
+.col-3 {
+    display: flex;
+    flex-direction: column;
+    height: 18rem;
+    flex-wrap: wrap;
+    width: 40%;
+}
+
+.col-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.catalog {
+    flex-wrap: wrap;
+    @include respond(super-small-phone) {
+        flex-direction: column; //400
+    }
+    .card {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+    }
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.header__desc {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    .info {
+        align-self: stretch;
+        justify-content: space-around;
+    }
+    @include respond(small-phone) {
+        flex-direction: column; //400
+        align-items: center;
+    }
+}
+
+.inner-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.hot-deals {
+    flex-wrap: wrap;
+    @include respond(super-small-phone) {
+        flex-direction: column; //400
+    }
+}
+
+.suppliers {
+    .card-1 {
+        display: flex;
+        align-items: center;
+    }
+}

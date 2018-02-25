@@ -1,0 +1,222 @@
+$color-blue-dark: #093567;
+$color-blue-light: #3784C0;
+$color-red: #E24157;
+$color-black: #222222;
+$color-grey-light-1: #E5E5E5;
+$color-grey-light-2: #EBEBEB;
+@font-face {
+    font-family: 'Play-Bold';
+    src: url('fonts/Play-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Play-Regular';
+    src: url('fonts/Play-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('fonts/Roboto-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url('fonts/Roboto-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url('fonts/Roboto-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-Thin';
+    src: url('fonts/Roboto-Thin.ttf');
+}
+
+/*
+$breakpoint arguement choices:
+- smallest
+- super-small-phone
+- small-phone
+- phone
+- tab-port
+- tab-land-smaller
+- tab-land-biger
+- desktop
+- big-desktop
+
+1em = 16px
+*/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint==smallest {
+        @media only screen and (max-width: 23.5em) {
+            @content
+        }
+        ; //375px
+    }
+    @if $breakpoint==super-small-phone {
+        @media only screen and (max-width: 25em) {
+            @content
+        }
+        ; //400px
+    }
+    @if $breakpoint==small-phone {
+        @media only screen and (max-width: 34.375em) {
+            @content
+        }
+        ; //550px
+    }
+    @if $breakpoint==phone {
+        @media only screen and (max-width: 40.625em) {
+            @content
+        }
+        ; //650px
+    }
+    @if $breakpoint==tab-port {
+        @media only screen and (max-width: 56.25em) {
+            @content
+        }
+        ; //900px
+    }
+    @if $breakpoint==tab-land-smaller {
+        @media only screen and (max-width: 62.5em) {
+            @content
+        }
+        ; //1000px
+    }
+    @if $breakpoint==tab-land-biger {
+        @media only screen and (max-width: 68.75em) {
+            @content
+        }
+        ; //1100px
+    }
+    @if $breakpoint==desktop {
+        @media only screen and (max-width: 87.5em) {
+            @content
+        }
+        ; //1400
+    }
+    @if $breakpoint==big-desktop {
+        @media only screen and (min-width: 90em) {
+            @content
+        }
+        ; //1440
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; //1rem = 10px, 10px/16px = 62.5%
+    @include respond(desktop) {
+        font-size: 60%; // 1200
+    }
+    @include respond(tab-land-biger) {
+        font-size: 57%; //1100
+    }
+    @include respond(tab-land-smaller) {
+        font-size: 53%; //1000
+    }
+    @include respond(tab-port) {
+        font-size: 50%; //900
+    }
+    @include respond(phone) {
+        font-size: 47%; //650
+    }
+    @include respond(small-phone) {
+        font-size: 43%; //550
+    }
+    @include respond(super-small-phone) {
+        font-size: 40%; //400
+    }
+}
+
+body {
+    font-family: 'Roboto-Regular', serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: $color-black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 7.2rem;
+    line-height: 7.5rem;
+    letter-spacing: 0.025em;
+    font-family: 'Play-Bold';
+}
+
+h2 {
+    font-size: 3.6rem;
+    line-height: 3.6rem;
+    letter-spacing: 0.025em;
+    font-family: 'Play-Bold';
+}
+
+h3 {
+    font-size: 2.4rem;
+    line-height: 3rem;
+    letter-spacing: 0.1em;
+    font-family: 'Roboto-Thin';
+}
+
+h4 {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    letter-spacing: 0.1em;
+    font-family: 'Roboto-Medium';
+}
+
+h5 {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    letter-spacing: 0.1em;
+    font-family: 'Roboto-Regular';
+}
+
+h6 {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    letter-spacing: 0.1em;
+    font-family: 'Roboto-Regular';
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    letter-spacing: 0.025em;
+    font-family: 'Roboto-Regular';
+}
+
+.paragraph {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    letter-spacing: 0.025em;
+    margin-bottom: 1.6rem;
+    font-family: 'Roboto-Regular';
+}
+
+a {
+    text-decoration: none;
+    color: $color-black;
+}

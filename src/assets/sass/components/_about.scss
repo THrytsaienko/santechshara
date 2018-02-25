@@ -1,0 +1,46 @@
+.about {
+    width: 100%;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+    .card-1,
+    .card-2 {
+        width: 50%;
+        @include respond(phone) {
+            width: 100%;
+        }
+        @include respond(small-phone) {
+            width: 100%; //400
+        }
+        @include respond(super-small-phone) {
+            width: 100%; //400
+        }
+    }
+    .card-1 {
+        padding: 5.5rem 12rem 5rem 13rem;
+        @include respond(desktop) {
+            padding: 5rem 10rem 5rem 10rem;
+        }
+        @include respond(small-phone) {
+            padding: 2rem 3rem 0 3rem;
+        }
+    }
+    .paragraph {
+        margin-top: 4rem;
+        padding-left: 10rem;
+        text-align: justify;
+        @include respond(desktop) {
+            padding-left: 7rem;
+        }
+        @include respond(small-phone) {
+            padding-left: 0;
+        }
+    }
+    h2 {
+        color: $color-blue-dark;
+    }
+    p {
+        margin-top: 4rem;
+    }
+}

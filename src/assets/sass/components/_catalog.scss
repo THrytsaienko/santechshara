@@ -1,0 +1,100 @@
+.catalog {
+    width: 100%;
+    .card {
+        border: 1px solid $color-grey-light-2;
+        min-height: 30rem;
+    }
+    .card-1,
+    .card-2 {
+        width: 50%;
+        @include respond(phone) {
+            width: 100%;
+        }
+        @include respond(super-small-phone) {
+            width: 100%; //400
+        }
+    }
+    .card-2 {
+        background-image: url('images/catalog-1.png');
+        background-size: cover;
+        background-position: center;
+    }
+    .card-3 {
+        background-image: url('images/catalog-2.png');
+        background-size: cover;
+        background-position: center;
+    }
+    .card-4 {
+        background-image: url('images/catalog-3.png');
+        background-size: cover;
+        background-position: center;
+    }
+    .card-5 {
+        background-image: url('images/catalog-4.png');
+        background-size: cover;
+        background-position: center;
+    }
+    .card-6 {
+        background-image: url('images/catalog-5.png');
+        background-size: cover;
+        background-position: center;
+    }
+    .card-3,
+    .card-4,
+    .card-5,
+    .card-6 {
+        width: 25%;
+        height: 25vw;
+        @include respond(phone) {
+            width: 100%;
+        }
+        @include respond(small-phone) {
+            width: 100%; //400
+        }
+        @include respond(super-small-phone) {
+            width: 100%; //400
+        }
+    }
+    .desc {
+        margin: 3rem;
+    }
+    .title,
+    .text {
+        color: $color-grey-light-2;
+    }
+    .title {
+        margin-bottom: 2.5rem;
+    }
+    .catalog-desc {
+        padding: 5.5rem 12rem 7rem 13rem;
+        @include respond(desktop) {
+            padding: 5rem 10rem 5rem 10rem;
+        }
+        @include respond(small-phone) {
+            padding: 2rem 3rem 0 3rem;
+        }
+        @include respond(super-small-phone) {
+            padding: 2rem 2rem 2rem 2rem; //400
+        }
+        p {
+            margin-top: 4rem;
+        }
+        h2 {
+            color: $color-blue-dark;
+        }
+        .paragraph {
+            margin-top: 4rem;
+            padding-left: 10rem;
+            @include respond(desktop) {
+                padding-left: 7rem;
+            }
+            @include respond(small-phone) {
+                padding-left: 0;
+            }
+            @include respond(super-small-phone) {
+                padding-left: 2rem;
+            }
+            text-align: justify;
+        }
+    }
+}

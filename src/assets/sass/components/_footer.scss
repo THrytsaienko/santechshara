@@ -1,0 +1,15 @@
+.footer {
+    background-color: $color-blue-dark;
+    color: $color-grey-light-2;
+    .paragraph {
+        margin-right: 4rem;
+        margin-top: 2rem;
+    }
+    .logo-icon {
+        width: 20rem;
+        height: 9rem;
+    }
+    a {
+        color: $color-grey-light-2;
+    }
+}

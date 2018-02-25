@@ -1,0 +1,112 @@
+.hot-deals {
+    width: 100%;
+    .card-1,
+    .card-2,
+    .card-4,
+    .card-5,
+    .card-6,
+    .card-7 {
+        width: 25%;
+        position: relative;
+        border: 1px solid $color-grey-light-2;
+        @include respond(phone) {
+            width: 100%;
+        }
+        @include respond(small-phone) {
+            width: 100%; //400
+        }
+        @include respond(super-small-phone) {
+            width: 100%; //400
+        }
+        img {
+            width: 10vw;
+            max-width: 30rem;
+            transform: translateX(50%);
+            margin: 2.5rem;
+            @include respond(phone) {
+                width: 100%;
+            }
+            @include respond(small-phone) {
+                width: 100%; //400
+            }
+            @include respond(super-small-phone) {
+                width: 100%; //400
+            }
+        }
+        svg {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 4.5rem;
+            height: 4.5rem;
+            fill: $color-grey-light-2;
+            padding: 1rem;
+            background-color: $color-blue-dark;
+        }
+    }
+    .card-3 {
+        width: 50%;
+        border: 1px solid $color-grey-light-2;
+        @include respond(phone) {
+            width: 100%;
+        }
+        @include respond(small-phone) {
+            width: 100%; //400
+        }
+        @include respond(super-small-phone) {
+            width: 100%; //400
+        }
+    }
+    .desc {
+        padding: 5rem 9rem 5rem 12rem;
+        @include respond(desktop) {
+            padding: 5rem 6rem 5rem 7rem;
+        }
+        @include respond(small-phone) {
+            padding: 2rem 3rem 0 3rem;
+        }
+        @include respond(super-small-phone) {
+            padding: 2rem 2rem 2rem 2rem;
+        }
+        h2 {
+            color: $color-blue-dark;
+        }
+        p {
+            margin-top: 4rem;
+        }
+        .paragraph {
+            padding-left: 10rem;
+            margin-top: 4rem;
+            @include respond(desktop) {
+                padding-left: 7rem;
+            }
+            @include respond(small-phone) {
+                padding-left: 0
+            }
+            @include respond(super-small-phone) {
+                padding-left: 2rem;
+            }
+            text-align: justify;
+        }
+    }
+    .sale {
+        display: inline;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: $color-grey-light-2;
+        background-color: $color-red;
+        padding: 2rem 1.5rem;
+        text-transform: uppercase;
+    }
+    .card__desc {
+        padding-left: 4rem;
+        p {
+            margin-bottom: .8rem;
+        }
+        .price {
+            margin-top: 2.5rem;
+            margin-bottom: 5rem;
+        }
+    }
+}

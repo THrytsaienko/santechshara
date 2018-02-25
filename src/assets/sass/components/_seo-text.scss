@@ -1,0 +1,28 @@
+.seo-text {
+    div {
+        padding: 5.5rem 23rem 7rem 13rem;
+        @include respond(desktop) {
+            padding: 5rem 10rem 5rem 10rem;
+        }
+        @include respond(small-phone) {
+            padding: 2rem 3rem 0 3rem;
+        }
+    }
+    .paragraph {
+        padding-left: 10rem;
+        @include respond(desktop) {
+            padding-left: 7rem;
+        }
+        @include respond(small-phone) {
+            padding-left: 0;
+        }
+        @include respond(super-small-phone) {
+            padding-left: 2rem;
+        }
+        text-align: justify;
+    }
+    h2 {
+        color: $color-blue-dark;
+        margin-bottom: 4rem;
+    }
+}

@@ -1,0 +1,142 @@
+.header {
+    position: relative;
+    height: 100vh;
+    background-image: url('images/bg.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    .menu {
+        height: 6.2rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    .search-icon,
+    .menu-icon {
+        width: 2.5rem;
+        height: 2rem;
+    }
+    .user-icon {
+        width: 6rem;
+        height: 6rem;
+        background-color: $color-blue-light;
+        fill: $color-grey-light-2;
+        padding: 1rem;
+    }
+    .shopping-cart-icon {
+        width: 6rem;
+        height: 6rem;
+        background-color: $color-blue-dark;
+        fill: $color-grey-light-2;
+        padding: 1rem;
+    }
+    .search-icon {
+        transform: translateY(4px);
+        @include respond(desktop) {
+            transform: translateY(2px);
+        }
+    }
+    input {
+        transform: translateY(-3px);
+        @include respond(desktop) {
+            transform: translateY(-2px);
+        }
+        border: none;
+        background-color: transparent;
+    }
+    .logo-icon {
+        width: 20rem;
+        height: 6rem;
+        margin-right: 10rem;
+        @include respond(desktop) {
+            margin-right: 7rem;
+        }
+        @include respond(tab-land-biger) {
+            margin-right: 4rem;
+        }
+        @include respond(tab-land-smaller) {
+            margin-right: 7rem;
+        }
+        @include respond(super-small-phone) {
+            margin-right: 5rem; //400
+        }
+    }
+    .search {
+        margin-left: 10rem;
+        @include respond(tab-land-biger) {
+            margin-left: 3rem;
+        }
+        @include respond(phone) {
+            display: none;
+        }
+        @include respond(super-small-phone) {
+            margin-left: 5rem; //400
+            display: none;
+        }
+    }
+    .working-hours {
+        margin-left: 9rem;
+        margin-right: 9rem;
+        @include respond(desktop) {
+            margin-left: 4rem;
+            margin-right: 3rem;
+        }
+        @include respond(tab-land-biger) {
+            margin-left: 6rem;
+            margin-right: 6rem;
+        }
+        @include respond(tab-land-smaller) {
+            margin-left: 5rem;
+            margin-right: 5rem;
+        }
+        @include respond(small-phone) {
+            display: none;
+        }
+        @include respond(super-small-phone) {
+            display: none; //400
+        }
+    }
+    .phone-num {
+        margin-right: 4.5rem;
+        @include respond(desktop) {
+            margin-right: 2rem;
+        }
+        @include respond(tab-land-biger) {
+            margin-right: 2.5rem;
+        }
+        @include respond(small-phone) {
+            display: none; //400
+        }
+    }
+    .catalog-name {
+        @include respond(small-phone) {
+            display: none; //400
+        }
+    }
+    .arrow-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .header__desc {
+        margin-bottom: 8rem;
+        .title {
+            width: 45%;
+            color: $color-blue-dark;
+            @include respond(small-phone) {
+                width: 100%; //400
+                padding-left: 2rem;
+                padding-bottom: 4rem;
+            }
+        }
+        span {
+            font-weight: 800;
+            font-size: 1.4rem;
+        }
+    }
+    .info {
+        @include respond(small-phone) {
+            display: none; //550
+        }
+    }
+}

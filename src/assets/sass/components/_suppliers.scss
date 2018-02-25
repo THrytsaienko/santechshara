@@ -1,0 +1,60 @@
+.suppliers {
+    width: 100%;
+    .card-1,
+    .card-2 {
+        width: 50%;
+        @include respond(phone) {
+            width: 100%;
+        }
+        @include respond(small-phone) {
+            width: 100%; //400
+        }
+        @include respond(super-small-phone) {
+            width: 100%; //400
+        }
+    }
+    .card-1 {
+        background-color: $color-blue-light;
+        text-align: center;
+        img {
+            padding: 3rem;
+            @include respond(phone) {
+                width: 15rem; //650
+                padding: 2rem;
+            }
+        }
+    }
+    .card-2 {
+        padding: 5rem 12rem 5rem 12rem;
+        @include respond(desktop) {
+            padding: 5rem 10rem 5rem 10rem;
+        }
+        @include respond(small-phone) {
+            padding: 2rem 3rem 0 3rem;
+        }
+        @include respond(super-small-phone) {
+            padding: 2rem 2rem 2rem 2rem; //400
+        }
+        .paragraph {
+            margin-top: 4rem;
+            padding-left: 10rem;
+            @include respond(desktop) {
+                padding-left: 7rem;
+            }
+            @include respond(small-phone) {
+                padding-left: 0;
+            }
+            @include respond(super-small-phone) {
+                padding-left: 2rem;
+            }
+            text-align: justify;
+        }
+        h2 {
+            color: $color-blue-dark;
+            padding-bottom: 2rem;
+        }
+        p {
+            margin-top: 3rem;
+        }
+    }
+}
